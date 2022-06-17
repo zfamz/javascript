@@ -1,6 +1,4 @@
-import { getStatus } from "../src";
-
-describe.only('clear test', () => {
+describe('clear test', (ctx) => {
   it.only('close', ok)
 })
 
@@ -35,7 +33,7 @@ describe('mocking', () => {
       expect(mock).toHaveBeenCalledTimes(3)
     })
   })
-  describe.only('date', () => {
+  describe('date', () => {
     const purchase = () => {
       const currentHour = new Date().getHours()
       const [open, close] = [9, 17]
@@ -88,8 +86,8 @@ describe('Filtering', () => {
   })
   it.skip('skip test', fail)
   // it.only('only test', () => ok(getStatus()))
-  it('only test', () => ok(getStatus()))
-  it.todo('unimplemented suite')
+  it('only test', () => ok)
+  // it.todo('unimplemented suite')
 })
 
 describe('test template', () => {
