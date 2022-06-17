@@ -1,0 +1,11 @@
+# Package Manager
+node_modules
+.pnpm-debug.log*
+
+# dist
+dist
+
+# local env files
+*.local
+
+coverage
