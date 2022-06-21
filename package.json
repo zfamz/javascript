@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
+    "testc": "vitest --changed",
     "testu": "vitest -u",
     "coverage": "vitest run --coverage"
   },

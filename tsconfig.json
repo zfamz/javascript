@@ -6,6 +6,15 @@
     "types": [
       "vitest/importMeta",
       "vitest/globals"
-    ]
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@arr/*": [
+        "src/array/*"
+      ]
+    }
   }
 }
