@@ -6,6 +6,7 @@ export default defineConfig({
     alias: {
       '@': `${resolve(__dirname, 'src')}`,
       '@arr': `${resolve(__dirname, 'src/array')}`,
+      '@utils': `${resolve(__dirname, 'src/utils')}`,
     },
   },
   test: {
