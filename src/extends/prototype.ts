@@ -1,7 +1,7 @@
 export function Person(name: string) {
   this.name = name
 }
-Person.prototype.getName = function() {
+Person.prototype.getName = function () {
   return this.name
 }
 
@@ -17,7 +17,7 @@ if (import.meta.vitest) {
   it.fails('problem', () => {
     const son = new Son('degg', 18)
     const person = new Person('person')
-    son.__proto__.getName = () => "Error"
+    son.__proto__.getName = () => 'Error'
     expect(person.getName()).toEqual('person')
   })
 }

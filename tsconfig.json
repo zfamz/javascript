@@ -3,21 +3,12 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "types": [
-      "vitest/importMeta",
-      "vitest/globals"
-    ],
+    "types": ["node", "vitest/importMeta", "vitest/globals"],
     "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@arr/*": [
-        "src/array/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ]
+      "@/*": ["src/*"],
+      "@arr/*": ["src/array/*"],
+      "@utils/*": ["src/utils/*"]
     }
   }
 }
