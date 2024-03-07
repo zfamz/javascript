@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "testc": "vitest --changed",
-    "testu": "vitest -u",
+    "tc": "vitest --changed",
+    "tu": "vitest -u",
     "coverage": "vitest run --coverage"
   },
   "keywords": [],

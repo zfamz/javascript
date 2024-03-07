@@ -1,4 +1,4 @@
-import { defineConfig } from "vitest/config";
+import { defineConfig } from 'vitest/config'
 import { resolve } from 'path'
 
 export default defineConfig({
@@ -11,13 +11,13 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    includeSource: ['src/**/*.{js,ts}'],
+    // includeSource: ['src/**/*.{js,ts}'],
     // snapshotFormat: {
     //   printBasicPrototype: true
     // }
   },
   // production build remove the is-source test
-  define: {
-    'import.meta.vitest': 'undefined'
-  },
+  // define: {
+  //   'import.meta.vitest': 'undefined'
+  // },
 })

@@ -1,12 +1,12 @@
-import { Person, Son } from "./standard";
+import { Person, Son } from './standard'
 
-describe("Extends", () => {
+describe('Extends', () => {
   const son = new Son('degg', 18)
   const son1 = new Son('degg_1', 20)
   const person = new Person('person')
 
   it('base', () => {
-    // attribute 
+    // attribute
     expect(son.name).toEqual('degg')
     // function
     expect(son.getName()).toEqual('degg')
@@ -29,18 +29,35 @@ describe("Extends", () => {
   })
 })
 
+describe.only('Obj and function relation', () => {
+  let obj: any = {}
+  function Bar() {}
+  let bar = new Bar()
 
+  it('只有函数有prototype属性，对象没有', () => {
+    expect(bar.prototype).toBeUndefined()
+    expect(Bar.prototype.constructor).toBe(Bar)
+  })
 
-describe.skip('Obj and function relation', () => {
-  it('proto chain', () => {
-    let obj = {}
-    function func() { }
-    expect(func.prototype).toEqual({})
-    // expect(obj.prototype).toBeUndefined()
-    // expect(obj.__proto__.__proto__).toBeNull()
-    // expect(obj.__proto__).toStrictEqual(obj.constructor.prototype)
-    expect(obj.constructor).toStrictEqual(Object)
-    expect(func.prototype.__proto__.__proto__).toBeNull()
+  it('prototype 和 constructor 的关系', () => {
+    expect(Bar.prototype).toBe(bar.__proto__)
+    expect(Bar.prototype.constructor).toBe(Bar)
+  })
+
+  it('原型链', () => {
+    expect(bar.__proto__).toBe(Bar.prototype)
+
+    // Bar 和 默认对象的关系
+    expect(Object.prototype).toBe(Bar.prototype.__proto__)
+    expect(obj.__proto__).toBe(bar.__proto__.__proto__)
+
+    // 原始 null. typeof null :  object
+    expect(Object.prototype).toBe(obj.__proto__)
+    expect(obj.__proto__.__proto__).toBeNull()
+
+    // 函数的__proto__ 最好都指向 Function.prototype
+    expect(Bar.__proto__).toBe(Function.prototype)
+    // Function.prototype.__proto__ 指向 Object.prototype
+    expect(Function.prototype.__proto__).toBe(Object.prototype)
   })
 })
-
