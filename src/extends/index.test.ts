@@ -56,8 +56,10 @@ describe.only('Obj and function relation', () => {
     expect(obj.__proto__.__proto__).toBeNull()
 
     // 函数的__proto__ 最好都指向 Function.prototype
+    // @ts-ignore
     expect(Bar.__proto__).toBe(Function.prototype)
     // Function.prototype.__proto__ 指向 Object.prototype
+    // @ts-ignore
     expect(Function.prototype.__proto__).toBe(Object.prototype)
   })
 })
