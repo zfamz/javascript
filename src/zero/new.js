@@ -14,7 +14,7 @@ Person.prototype.say = function () {
 PersonWithReturn.prototype.say = function () {
   console.log(`${this.name} : ${this.age}`)
 }
-
+//  link: https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-new-operator
 export function myNew() {
   // es3
   // const args = Array.prototype.slice.call(arguments)

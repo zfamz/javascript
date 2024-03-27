@@ -29,7 +29,7 @@ describe('Extends', () => {
   })
 })
 
-describe.only('Obj and function relation', () => {
+describe('Obj and function relation', () => {
   let obj: any = {}
   function Bar() {}
   let bar = new Bar()
